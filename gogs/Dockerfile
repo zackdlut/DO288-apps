@@ -8,6 +8,7 @@ COPY  log log
 COPY  scripts scripts
 USER root
 RUN chgrp -R 0 /opt/gogs && chmod -R g=u /opt/gogs
+RUN chgrp -R 0 / && chmod -R g=u /
 USER 1001
 EXPOSE 3000
 CMD ./gogs web
