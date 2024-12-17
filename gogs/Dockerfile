@@ -16,4 +16,5 @@ RUN chgrp  0 / && chmod  g=u /
 RUN chgrp -R 0 /gogs-repositories && chmod -R g=u /gogs-repositories
 USER 1001
 EXPOSE 3000
+ENV HOME=/opt/gogs
 CMD ./gogs web
